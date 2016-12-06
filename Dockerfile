@@ -17,4 +17,5 @@ RUN cd /tmp/dist && ./setup -b -c /tmp/answer.key
 VOLUME /var/opt/openit/etc /data
 EXPOSE 80 7478
 
-CMD su - -c "/opt/openit/bin/openit-all start"
+RUN su - -c "/opt/openit/bin/openit-all start"
+CMD exit 0
