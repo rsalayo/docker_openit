@@ -13,3 +13,5 @@ RUN cd /tmp/dist && ./setup -b -c /tmp/answer.key
 # Ports and Volumes
 VOLUME /var/opt/openit/etc /data
 EXPOSE 80 7478
+
+CMD ["/opt/openit/bin/openit-all start"]
