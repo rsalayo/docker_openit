@@ -7,8 +7,8 @@ RUN cd /tmp && wget https://dropbox.openit.com/25ba14f858ce242073ca1479e2ef7bef/
 # Extract and Install OpeniT CoreServer
 ADD setup/answer.key /tmp
 RUN useradd openit
-RUN tar -xvpf openit_6_5_0_22_server_linux_x86_64.tar
-RUN /openit/releases/Supported/REL_6-5-0-22/unix/server/dist/setup -b -c /tmp/answer.key
+RUN cd /tmp && tar -xvpf /tmp/openit_6_5_0_22_server_linux_x86_64.tar
+RUN cd /tmp/dist && ./setup -b -c /tmp/answer.key
 
 # Ports and Volumes
 VOLUME /var/opt/openit/etc /data
