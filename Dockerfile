@@ -17,5 +17,5 @@ RUN cd /tmp/dist && ./setup -b -c /tmp/answer.key
 VOLUME /var/opt/openit/etc /data
 EXPOSE 80 7478
 
-RUN echo "127.0.0.1 `hostname`" >> /etc/hosts
-RUN su - -c "/opt/openit/bin/openit-all start"
+RUN echo "ServerName `hostname`" >> /var/opt/openit/etc/httpd/httpd.conf
+RUN su - -c "/opt/openit/bin/openit-all restart"
