@@ -18,4 +18,5 @@ VOLUME /var/opt/openit/etc /data
 EXPOSE 80 7478
 
 RUN echo "ServerName `hostname`" >> /var/opt/openit/etc/httpd/httpd.conf
-CMD su - -c "/opt/openit/bin/openit-all start"
+RUN su - -c "/opt/openit/bin/openit-all start"
+CMD /bin/bash
