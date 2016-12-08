@@ -47,6 +47,11 @@
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	<Volume>
+      <HostDir>/mnt/user/global_share/demolicense/license</HostDir>
+      <ContainerDir>/var/opt/openit/license</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT]/</WebUI>
   <Icon>https://openit.com/wp-content/themes/caffeine/images/logo.png</Icon>
@@ -64,5 +69,8 @@
 
   <Config Type="Path" Name="Installation Directory" Target="/openit" Default="/openit" Mode="rw" Display="advanced-hide" Required="false"
        Description="This is where OpeniT installation files are stored.">/openit</Config>
+
+  <Config Type="Path" Name="License File" Target="/var/opt/openit/license" Default="/mnt/user/global_share/demolicense/license" Mode="ro" Display="advanced-hide" Required="false"
+       Description="This is where OpeniT installation files are stored.">/mnt/user/global_share/demolicense/license</Config>
 	   
 </Container>
