@@ -3,7 +3,7 @@
   <Date>2016-12-07</Date>
   <Beta>True</Beta>
   <Category>Cloud:</Category>
-  <Name>OpeniT_REL_6-5-0-22</Name>
+  <Name>OpeniT_REL_6-3-0-5</Name>
   <Project>http://www.openit.com/</Project>
   <Changes>
 [font size=3]2016.12.07[/font]
@@ -21,7 +21,7 @@
   </Description>
   <Registry>https://hub.docker.com/r/openitdotcom/coreserver/</Registry>
   <GitHub>https://github.com/rsalayo/docker_openit</GitHub>
-  <Repository>openitdotcom/coreserver</Repository>
+  <Repository>openitdotcom/coreserver:6.3.0.5</Repository>
   <Support>https://support.openit.com</Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
