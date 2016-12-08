@@ -1,2 +1,2 @@
-# OpeniT 6.5.0.22
+# OpeniT CoreServer
 Docker repository for OpeniT Server

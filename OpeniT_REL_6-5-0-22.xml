@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2016-12-07</Date>
+  <Beta>True</Beta>
+  <Category>Cloud:</Category>
+  <Name>OpeniT_REL_6-5-0-22</Name>
+  <Project>http://www.openit.com/</Project>
+  <Changes>
+[font size=3]2016.12.07[/font]
+- Cleanup
+[font size=3]2016.12.05[/font]
+- Initial Release
+  </Changes>
+  <Overview>
+    Open iT is a software asset management solution which can meter and report on how individuals or groups use applications, servers, storage, databases and services across an enterprise. Open iT enables fully customizable usage reporting, granular chargeback for software and hardware usage, and industry-leading automated license management capabilities across Windows, Unix and Linux platforms.
+  </Overview>
+  <Description>
+    Open iT is a software asset management solution which can meter and report on how individuals or groups use applications, servers, storage, databases and services across an enterprise. Open iT enables fully customizable usage reporting, granular chargeback for software and hardware usage, and industry-leading automated license management capabilities across Windows, Unix and Linux platforms.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/var/opt/openit/etc[/b] : this is the path where OpeniT will store its configuration files.
+  </Description>
+  <Registry>https://hub.docker.com/r/openitdotcom/coreserver/</Registry>
+  <GitHub>https://github.com/rsalayo/docker_openit</GitHub>
+  <Repository>openitdotcom/coreserver</Repository>
+  <Support>https://support.openit.com</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7478</HostPort>
+        <ContainerPort>7478</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/global_share/data/customer</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT]/</WebUI>
+  <Icon>https://openit.com/wp-content/themes/caffeine/images/logo.png</Icon>
+
+  <Network Default="bridge">bridge</Network>
+
+  <Config Type="Port" Name="Web Interface Port" Target="80" Mode="tcp" Display="always-hide" Required="true"
+       Description="This is Sync's Web UI port you can access via a web browser.">8080</Config>
+
+  <Config Type="Port" Name="TCP Server Transfer Port" Target="7478" Default="7478" Mode="tcp" Display="always-hide" Required="false"
+       Description="This is OpeniT's TCP port for data transfers.">7478</Config>
+  
+  <Config Type="Path" Name="Data Storage Path" Target="/data" Default="/mnt/user/global_share/data/customer" Mode="rw" Display="always-hide" Required="true"
+       Description="This is where OpeniT will store its databases.">/mnt/user/global_share/data/customer</Config>
+
+  <Config Type="Path" Name="Installation Directory" Target="/openit" Default="/openit" Mode="rw" Display="advanced-hide" Required="false"
+       Description="This is where OpeniT installation files are stored.">/openit</Config>
+	   
+</Container>
