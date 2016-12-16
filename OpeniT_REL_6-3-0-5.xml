@@ -49,7 +49,7 @@
     </Volume>
 	<Volume>
       <HostDir>/mnt/user/global_share/demolicense/license</HostDir>
-      <ContainerDir>/var/opt/openit/license</ContainerDir>
+      <ContainerDir>/var/opt/openit/etc/license</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
   </Data>
@@ -70,7 +70,7 @@
   <Config Type="Path" Name="Installation Directory" Target="/openit" Default="/openit" Mode="rw" Display="advanced-hide" Required="false"
        Description="This is where OpeniT installation files are stored.">/openit</Config>
 
-  <Config Type="Path" Name="License File" Target="/var/opt/openit/license" Default="/mnt/user/global_share/demolicense/license" Mode="ro" Display="advanced-hide" Required="false"
+  <Config Type="Path" Name="License File" Target="/var/opt/openit/etc/license" Default="/mnt/user/global_share/demolicense/license" Mode="ro" Display="advanced-hide" Required="false"
        Description="This is where OpeniT installation files are stored.">/mnt/user/global_share/demolicense/license</Config>
 	   
 </Container>
