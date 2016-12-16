@@ -47,6 +47,16 @@
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/global_share/data/customer</HostDir>
+      <ContainerDir>/var/opt/openit/etc</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/global_share/demolicense/license</HostDir>
+      <ContainerDir>/var/opt/openit/etc/license</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT]/</WebUI>
   <Icon>https://openit.com/wp-content/themes/caffeine/images/logo.png</Icon>
@@ -58,11 +68,17 @@
 
   <Config Type="Port" Name="TCP Server Transfer Port" Target="7478" Default="7478" Mode="tcp" Display="always-hide" Required="false"
        Description="This is OpeniT's TCP port for data transfers.">7478</Config>
-  
+
   <Config Type="Path" Name="Data Storage Path" Target="/data" Default="/mnt/user/global_share/data/customer" Mode="rw" Display="always-hide" Required="true"
        Description="This is where OpeniT will store its databases.">/mnt/user/global_share/data/customer</Config>
 
   <Config Type="Path" Name="Installation Directory" Target="/openit" Default="/openit" Mode="rw" Display="advanced-hide" Required="false"
        Description="This is where OpeniT installation files are stored.">/openit</Config>
-	   
+
+   <Config Type="Path" Name="License File" Target="/var/opt/openit/etc" Default="/mnt/user/global_share/demolicense/license" Mode="ro" Display="advanced-hide" Required="false"
+       Description="This is where OpeniT installation files are stored.">/mnt/user/global_share/data/customer</Config>
+
+  <Config Type="Path" Name="License File" Target="/var/opt/openit/etc/license" Default="/mnt/user/global_share/demolicense/license" Mode="ro" Display="advanced-hide" Required="false"
+       Description="This is where OpeniT installation files are stored.">/mnt/user/global_share/demolicense/license</Config>
+
 </Container>
