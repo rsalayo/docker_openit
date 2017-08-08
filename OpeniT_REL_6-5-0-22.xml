@@ -43,12 +43,12 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/global_share/data/customer</HostDir>
+      <HostDir>/mnt/user/global_share/customer</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/global_share/data/customer</HostDir>
+      <HostDir>/mnt/user/global_share/customer</HostDir>
       <ContainerDir>/var/opt/openit/etc</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
