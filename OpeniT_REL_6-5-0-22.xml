@@ -64,7 +64,7 @@
   <Network Default="bridge">bridge</Network>
 
   <Config Type="Port" Name="Web Interface Port" Target="80" Mode="tcp" Display="always-hide" Required="true"
-       Description="This is Sync's Web UI port you can access via a web browser.">8080</Config>
+       Description="This is Reporting Server's Web UI port you can access via a web browser.">8080</Config>
 
   <Config Type="Port" Name="TCP Server Transfer Port" Target="7478" Default="7478" Mode="tcp" Display="always-hide" Required="false"
        Description="This is OpeniT's TCP port for data transfers.">7478</Config>
