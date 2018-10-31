@@ -9,7 +9,7 @@ ADD setup/answer.key /tmp
 ADD setup/init /
 RUN useradd openit && \
 	cd /tmp && \
-	wget https://www.dropbox.com/s/knp3heqgom4mjen/openit_6_5_0_22_server_linux_x86_64.tar?dl=1 -O openit.tar && \
+	wget https://privatebox.openit.com/3151f37a0b9e1bfc3bab7f885166a80e/Server/Linux/openit_6_5_1_14_server_linux_x86_64.tar -O openit.tar && \
 	tar -xvpf /tmp/openit.tar && \
 	chmod a+x /init && \
 	cd /tmp/dist && \
