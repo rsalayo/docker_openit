@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2018-11-27</Date>
+  <Beta>True</Beta>
+  <Category>Cloud:</Category>
+  <Name>Centos:6</Name>
+  <Project>https://hub.docker.com/_/centos/</Project>
+  <Changes>
+  </Changes>
+  <Overview>
+    CentOS 6 Base Image
+  </Overview>
+  <Description>
+    CentOS 6 Base Image
+  </Description>
+  <Registry>https://hub.docker.com/_/centos/</Registry>
+  <GitHub>https://github.com/CentOS/sig-cloud-instance-images/tree/23b05f6a35520ebf338e4df918e4952830da068b/docker</GitHub>
+  <Repository>centos:6</Repository>
+  <Support>https://hub.docker.com/_/centos/</Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+  </Data>
+  <WebUI></WebUI>
+  <Icon></Icon>
+
+  <Network Default="bridge">bridge</Network>
+
+</Container>
